@@ -1,0 +1,75 @@
+# ═══════════════════════════════════════════════════════════
+# MARJIYA AUTO — LOCATIONS DATA
+# ═══════════════════════════════════════════════════════════
+
+- key: dhaka
+  name: Dhaka
+  name_bn: ঢাকা
+  url: /locations/dhaka/
+  delivery_time: "1–2 working days"
+  priority: 1
+  population: "22 million"
+  context: "Bangladesh capital — largest motorcycle market"
+
+- key: chattogram
+  name: Chattogram
+  name_bn: চট্টগ্রাম
+  url: /locations/chattogram/
+  delivery_time: "2–3 working days"
+  priority: 2
+  population: "8 million"
+  context: "Port city — major commercial center"
+
+- key: sylhet
+  name: Sylhet
+  name_bn: সিলেট
+  url: /locations/sylhet/
+  delivery_time: "2–3 working days"
+  priority: 3
+  population: "5 million"
+  context: "Tea capital — growing motorcycle market"
+
+- key: rajshahi
+  name: Rajshahi
+  name_bn: রাজশাহী
+  url: /locations/rajshahi/
+  delivery_time: "2–3 working days"
+  priority: 4
+  population: "4 million"
+  context: "Silk city — large rider community"
+
+- key: khulna
+  name: Khulna
+  name_bn: খুলনা
+  url: /locations/khulna/
+  delivery_time: "1–2 working days"
+  priority: 5
+  population: "3.5 million"
+  context: "Nearest major city to Jashore — same division"
+
+- key: rangpur
+  name: Rangpur
+  name_bn: রংপুর
+  url: /locations/rangpur/
+  delivery_time: "2–4 working days"
+  priority: 6
+  population: "3 million"
+  context: "Northern Bangladesh — agricultural region"
+
+- key: barishal
+  name: Barishal
+  name_bn: বরিশাল
+  url: /locations/barishal/
+  delivery_time: "2–3 working days"
+  priority: 7
+  population: "2.5 million"
+  context: "River delta city — growing market"
+
+- key: mymensingh
+  name: Mymensingh
+  name_bn: ময়মনসিংহ
+  url: /locations/mymensingh/
+  delivery_time: "2–3 working days"
+  priority: 8
+  population: "2 million"
+  context: "Agricultural university city"
