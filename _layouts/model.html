@@ -1,0 +1,102 @@
+---
+layout: default
+---
+{%- capture wa_model -%}{{ page.model_name }} পার্টস চাই — বাইকের বছর:{%- endcapture -%}
+{%- capture brand_crumb -%}{{ page.brand_name }} Parts{%- endcapture -%}
+{% include breadcrumb.html n2="Brands" u2="/brands/" n3=brand_crumb u3=page.brand_url n4=page.model_name %}
+
+<section class="loc-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Genuine {{ page.brand_name }} Parts</div>
+    <h1 class="loc-h1">{{ page.model_name | upcase }}<br/><span>PARTS</span></h1>
+    <p class="loc-h1-bn bangla" lang="bn">{{ page.model_name_bn }} পার্টস</p>
+    <p class="loc-sub">{{ page.intro }}</p>
+    <p class="loc-sub loc-sub-bn bangla" lang="bn">{{ page.intro_bn }}</p>
+    <div class="hero-actions">
+      <a href="{% include wa.html text=wa_model %}" class="btn-wa" target="_blank" rel="noopener">💬 WhatsApp: {{ page.model_name }} Parts</a>
+      <a href="tel:{{ site.phone_href }}" class="btn-s">📞 {{ site.phone }}</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item"><span class="ti-icon" aria-hidden="true">✅</span><span><strong>Genuine</strong> <span class="ti-text">{{ page.model_name }} Parts</span></span></div>
+    <div class="trust-item"><span class="ti-icon" aria-hidden="true">⭐</span><span><strong>★{{ site.rating }}</strong> <span class="ti-text">{{ site.review_count }}+ Google Reviews</span></span></div>
+    <div class="trust-item"><span class="ti-icon" aria-hidden="true">🚚</span><span><strong>All Bangladesh</strong> <span class="ti-text">Home Delivery</span></span></div>
+    <div class="trust-item"><span class="ti-icon" aria-hidden="true">⚠️</span><span><strong>Year Confirm</strong> <span class="ti-text">Before Ordering</span></span></div>
+  </div>
+</div>
+
+<section class="bg-dark">
+  <div class="section-inner">
+    <span class="section-label reveal">Parts We Handle</span>
+    <h2 class="section-title reveal">{{ page.model_name | upcase }}<br/>SPARE PARTS</h2>
+    <p class="section-sub reveal">Tap a part to ask about it on WhatsApp. We confirm availability, current price and fitment for your bike's year before you pay.</p>
+
+    <div class="grid-4">
+      {%- for part in page.parts %}
+      {%- capture wa_part -%}{{ page.model_name }} {{ part.name }} চাই — বাইকের বছর:{%- endcapture %}
+      <a href="{% include wa.html text=wa_part %}" class="card product-card reveal" target="_blank" rel="noopener">
+        <div class="product-card-img">
+          <img src="{{ site.placeholder_image | relative_url }}"
+               alt="{{ page.model_name }} {{ part.name }} — photo available on WhatsApp"
+               loading="lazy" width="400" height="300" />
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-brand">{{ page.brand_name }} · {{ page.model_name }}</div>
+          <div class="product-card-name">{{ part.name }}</div>
+          <div class="product-card-badges">
+            <span class="badge badge-genuine">✓ Genuine</span>
+            <span class="badge badge-stock">Ask Stock</span>
+          </div>
+          <span class="product-card-cta">💬 WhatsApp Price</span>
+        </div>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="bg-black">
+  <div class="section-inner">
+    <div class="notice reveal">
+      <h3>⚠ Year Compatibility Notice</h3>
+      <p>
+        {{ page.model_name }} parts can vary by <strong>manufacturing year</strong>.
+        Send us your bike's registration year on WhatsApp and we confirm the correct part before dispatch.
+      </p>
+      <a href="{% include wa.html text=wa_model %}" class="btn-wa btn-sm" target="_blank" rel="noopener">💬 Confirm Fitment</a>
+    </div>
+
+    <div class="mt-48">
+      <span class="section-label reveal">Quality Matters</span>
+      <h2 class="section-title reveal">ORIGINAL vs COPY<br/>{{ page.model_name | upcase }} PARTS</h2>
+      <div class="table-wrap reveal">
+      <table class="gvc-table">
+        <thead>
+          <tr><th scope="col">Feature</th><th scope="col" class="col-genuine">✅ Original OEM</th><th scope="col" class="col-copy">✗ Copy / Local</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" class="row-label">Fitment</th><td class="col-genuine">Made to OEM spec</td><td class="col-copy">May need modification</td></tr>
+          <tr><th scope="row" class="row-label">Materials</th><td class="col-genuine">Factory specification</td><td class="col-copy">Often inferior grade</td></tr>
+          <tr><th scope="row" class="row-label">Service life</th><td class="col-genuine">Longer</td><td class="col-copy">Usually shorter</td></tr>
+          <tr><th scope="row" class="row-label">Brand marking</th><td class="col-genuine">✅ Present</td><td class="col-copy">✗ Absent or fake</td></tr>
+          <tr><th scope="row" class="row-label">Safety parts</th><td class="col-genuine">Built to spec</td><td class="col-copy">⚠ Unverified</td></tr>
+          <tr><th scope="row" class="row-label">Long-term cost</th><td class="col-genuine">Lower (no repeat buy)</td><td class="col-copy">Higher (replace often)</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ content }}
+
+{%- capture faq_title -%}{{ page.model_name | upcase }} PARTS — FAQ{%- endcapture -%}
+{% include faq.html title=faq_title %}
+
+{%- capture cta_head -%}ORDER {{ page.model_name | upcase }} PARTS NOW{%- endcapture %}
+{% include cta.html heading=cta_head text="Genuine parts. Home delivery all 64 districts. bKash · Nagad · COD." wa=wa_model %}

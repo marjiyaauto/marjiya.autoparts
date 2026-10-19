@@ -1,0 +1,68 @@
+---
+layout: default
+---
+{%- capture wa_brand -%}{{ page.brand_name }} পার্টস চাই — আমার বাইক:{%- endcapture -%}
+{% include breadcrumb.html n2="Brands" u2="/brands/" n3=page.brand_name %}
+
+<section class="hero hero-sub">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-tag">Genuine {{ page.brand_name }} Parts</div>
+    <h1 class="hero-h1">{{ page.brand_name | upcase }}<br/><span>PARTS</span></h1>
+    <p class="hero-h1-bn bangla" lang="bn">{{ page.brand_name_bn }} পার্টস বাংলাদেশ</p>
+    <p class="hero-desc">{{ page.intro }}</p>
+    <p class="hero-desc hero-desc-bn bangla" lang="bn">{{ page.intro_bn }}</p>
+    <div class="hero-actions">
+      <a href="{% include wa.html text=wa_brand %}" class="btn-wa" target="_blank" rel="noopener">💬 WhatsApp: Order {{ page.brand_name }} Parts</a>
+      <a href="tel:{{ site.phone_href }}" class="btn-s">📞 {{ site.phone }}</a>
+    </div>
+  </div>
+</section>
+
+{% include trust-bar.html label=page.brand_name %}
+
+<section class="bg-dark">
+  <div class="section-inner">
+    <span class="section-label reveal">By Model</span>
+    <h2 class="section-title reveal">{{ page.brand_name | upcase }} MODELS</h2>
+    <p class="section-sub reveal">Select your {{ page.brand_name }} model to see the genuine spare parts we handle.</p>
+    <div class="grid-4">
+      {%- for model in page.top_models %}
+      {%- assign m = site.data.models | where: "url", model.url | first %}
+      <a href="{{ model.url | relative_url }}" class="card model-card reveal">
+        <div class="model-card-brand">{{ page.brand_name }}</div>
+        <div class="model-card-name">{{ model.name }}</div>
+        <div class="model-card-desc">Genuine spare parts for {{ model.name }}</div>
+        <div class="model-card-parts">
+          {%- if m.parts %}{% for p in m.parts limit: 3 %}<span class="model-card-part-pill">{{ p }}</span>{% endfor %}
+          {%- else %}<span class="model-card-part-pill">Engine Parts</span><span class="model-card-part-pill">Body Parts</span><span class="model-card-part-pill">Electrical</span>{% endif %}
+        </div>
+        <span class="brand-card-link">View Parts →</span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="bg-black">
+  <div class="section-inner">
+    <span class="section-label reveal">All Parts</span>
+    <h2 class="section-title reveal">{{ page.brand_name | upcase }} SPARE PARTS<br/>BY CATEGORY</h2>
+    <div class="grid-4">
+      {%- for cat in site.data.categories limit: 8 %}
+      <a href="{{ cat.url | relative_url }}" class="card cat-card reveal">
+        <div class="cat-card-icon" aria-hidden="true">{{ cat.icon }}</div>
+        <div><div class="cat-card-name">{{ cat.name }}</div><div class="cat-card-name-bn bangla" lang="bn">{{ cat.name_bn }}</div></div>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{{ content }}
+
+{%- capture faq_title -%}{{ page.brand_name | upcase }} PARTS — FAQ{%- endcapture -%}
+{% include faq.html title=faq_title %}
+
+{% include cta.html heading="GET GENUINE PARTS DELIVERED TO YOUR DOOR" text="WhatsApp or call us with your bike model. We confirm stock, price and fitment before you pay. Home delivery all 64 districts." wa=wa_brand %}

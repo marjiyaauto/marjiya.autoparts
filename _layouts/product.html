@@ -1,0 +1,182 @@
+---
+layout: default
+---
+{%- comment -%}
+  Images: front-matter paths are site-root relative (e.g. /assets/images/foo.webp).
+  Any image file that has not been uploaded yet is skipped and replaced by the placeholder,
+  so you never ship broken image icons.
+{%- endcomment -%}
+{%- assign main_src = page.image_main | default: site.placeholder_image -%}
+{%- assign main_exists = site.static_files | where: "path", main_src | first -%}
+{%- unless main_exists %}{% assign main_src = site.placeholder_image %}{% endunless -%}
+{%- capture wa_prod -%}আমি {{ page.model_name }} {{ page.part_name }} চাই — আমার বাইকের বছর:{%- endcapture -%}
+{%- capture wa_price -%}{{ page.model_name }} {{ page.part_name }} — দাম জানতে চাই{%- endcapture -%}
+{% include breadcrumb.html n2=page.brand_name u2=page.brand_url n3=page.model_name u3=page.model_url n4=page.part_name %}
+
+<div class="product-page">
+  <div class="product-layout">
+
+    <div class="product-gallery">
+      <div class="product-main-img">
+        <img src="{{ main_src | relative_url }}" alt="{{ page.image_alt_main | default: page.part_name }}" width="800" height="600" loading="eager" />
+      </div>
+      <div class="product-thumbs">
+        {%- for img in page.images %}
+        {%- assign t_exists = site.static_files | where: "path", img.src | first %}
+        {%- if t_exists %}
+        <button class="product-thumb{% if img.src == main_src %} active{% endif %}" type="button" aria-label="Show: {{ img.alt | escape }}">
+          <img src="{{ img.src | relative_url }}" alt="{{ img.alt | escape }}" width="72" height="72" loading="lazy" />
+        </button>
+        {%- endif %}
+        {%- endfor %}
+      </div>
+    </div>
+
+    <div class="product-info">
+      <div class="product-brand-tag">
+        <a href="{{ page.brand_url | relative_url }}">{{ page.brand_name }}</a> ›
+        <a href="{{ page.model_url | relative_url }}">{{ page.model_name }}</a>
+      </div>
+
+      <h1 class="product-h1">{{ page.model_name }} {{ page.part_name }} — Original</h1>
+      <p class="product-h1-bn bangla" lang="bn">{{ page.part_name_bn }}</p>
+
+      <div class="product-badges">
+        <span class="badge badge-genuine">✅ Genuine Original</span>
+        <span class="badge badge-stock">Ask Stock on WhatsApp</span>
+        <span class="badge badge-delivery">🚚 All Bangladesh</span>
+      </div>
+
+      <table class="product-spec-table">
+        <tbody>
+          <tr><th scope="row">Brand</th><td><strong>{{ page.brand_name }}</strong></td></tr>
+          <tr><th scope="row">Compatible model</th><td><strong>{{ page.model_name }}</strong></td></tr>
+          <tr><th scope="row">Year compatible</th><td><strong>{{ page.year_compat | default: "Confirm before ordering" }}</strong></td></tr>
+          <tr><th scope="row">Part type</th><td><strong>{{ page.part_type }}</strong></td></tr>
+          <tr><th scope="row">Condition</th><td><strong>New — Genuine Original OEM</strong></td></tr>
+          {%- if page.part_number %}<tr><th scope="row">Part number</th><td><strong>{{ page.part_number }}</strong></td></tr>{% endif %}
+          {%- if page.color %}<tr><th scope="row">Colour</th><td><strong>{{ page.color }}</strong></td></tr>{% endif %}
+        </tbody>
+      </table>
+
+      <div class="product-micro-trust">
+        <div class="pmt-item"><span class="pmt-icon" aria-hidden="true">✅</span> Genuine Original</div>
+        <div class="pmt-item"><span class="pmt-icon" aria-hidden="true">⭐</span> ★{{ site.rating }} Google ({{ site.review_count }} reviews)</div>
+        <div class="pmt-item"><span class="pmt-icon" aria-hidden="true">🚚</span> 1–4 Day Delivery</div>
+        <div class="pmt-item"><span class="pmt-icon" aria-hidden="true">💳</span> {{ site.payments }}</div>
+        <div class="pmt-item"><span class="pmt-icon" aria-hidden="true">🏆</span> Since {{ site.established }}</div>
+      </div>
+
+      <div class="product-price-block">
+        <div class="ppb-label">PRICE</div>
+        <div class="ppb-price">{% if page.price %}৳{{ page.price }}{% else %}WhatsApp for current price{% endif %}</div>
+        <div class="ppb-note bangla" lang="bn">দাম stock ও market অনুযায়ী পরিবর্তন হয়। WhatsApp করলে সাথে সাথে exact দাম জানানো হবে।</div>
+      </div>
+
+      <div class="product-fitment-warn">
+        <strong>⚠ Year compatibility:</strong>
+        {{ page.model_name }} parts can vary by manufacturing year. Share your bike's registration year when ordering.
+      </div>
+
+      <div class="product-ctas">
+        <a href="{% include wa.html text=wa_prod %}" class="btn-wa" target="_blank" rel="noopener">💬 WhatsApp: Order Now</a>
+        <a href="tel:{{ site.phone_href }}" class="btn-call">📞 Call: {{ site.phone }}</a>
+        <a href="{{ site.gbp }}" class="btn-s btn-sm" target="_blank" rel="noopener">📍 ★{{ site.rating }} Verify on Google Maps</a>
+      </div>
+
+      <div class="info-box">
+        <strong>💳 Payment methods:</strong> bKash (Send Money) · Nagad (Send Money) · Cash on Delivery
+        <br/><br/>
+        <strong>🚚 Delivery:</strong> {{ site.delivery_note }}<br/>
+        Courier: {{ site.couriers }}
+      </div>
+    </div>
+  </div>
+
+  <div class="product-body">
+    <h2 class="h2-sm">ABOUT THIS {{ page.part_name | upcase }}</h2>
+    <div class="prose">{{ page.long_description }}</div>
+
+    <h2 class="h2-sm">ORIGINAL vs COPY — {{ page.part_name | upcase }}</h2>
+    <div class="table-wrap">
+    <table class="gvc-table">
+      <thead>
+        <tr><th scope="col">Feature</th><th scope="col" class="col-genuine">✅ Original OEM</th><th scope="col" class="col-copy">✗ Copy / Local</th></tr>
+      </thead>
+      <tbody>
+        {%- if page.gvc_rows %}
+          {%- for row in page.gvc_rows %}
+          <tr><th scope="row" class="row-label">{{ row.feature }}</th><td class="col-genuine">{{ row.genuine }}</td><td class="col-copy">{{ row.copy }}</td></tr>
+          {%- endfor %}
+        {%- else %}
+          <tr><th scope="row" class="row-label">Fitment</th><td class="col-genuine">Made to OEM spec</td><td class="col-copy">May need modification</td></tr>
+          <tr><th scope="row" class="row-label">Materials</th><td class="col-genuine">Factory specification</td><td class="col-copy">Often inferior grade</td></tr>
+          <tr><th scope="row" class="row-label">Brand marking</th><td class="col-genuine">✅ Present</td><td class="col-copy">✗ Absent or fake</td></tr>
+          <tr><th scope="row" class="row-label">Long-term cost</th><td class="col-genuine">Lower (no repeat buy)</td><td class="col-copy">Higher (replace often)</td></tr>
+        {%- endif %}
+      </tbody>
+    </table>
+    </div>
+
+    <h2 class="h2-sm">HOW TO ORDER — STEP BY STEP</h2>
+    <div class="delivery-steps delivery-steps-2">
+      <div class="ds-step"><div class="ds-icon" aria-hidden="true">💬</div><div class="ds-title">WhatsApp Us</div><div class="ds-desc">Message {{ site.phone }}. Tell us: {{ page.model_name }} {{ page.part_name }} + your bike year.</div></div>
+      <div class="ds-step"><div class="ds-icon" aria-hidden="true">✅</div><div class="ds-title">Confirm Stock</div><div class="ds-desc">We confirm availability, price, and fitment for your exact year.</div></div>
+      <div class="ds-step"><div class="ds-icon" aria-hidden="true">💳</div><div class="ds-title">Pay</div><div class="ds-desc">bKash or Nagad (Send Money), or choose Cash on Delivery.</div></div>
+      <div class="ds-step"><div class="ds-icon" aria-hidden="true">🚚</div><div class="ds-title">Receive at Door</div><div class="ds-desc">Packed securely. Tracking number sent. 1–4 working days.</div></div>
+    </div>
+
+    {%- if page.faq %}
+    <h2 class="h2-sm">FREQUENTLY ASKED QUESTIONS</h2>
+    <div class="faq-list faq-list-wide">
+      {%- for item in page.faq %}
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-{{ forloop.index }}" id="faq-q-{{ forloop.index }}">{{ item.q }}<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a" id="faq-a-{{ forloop.index }}" role="region" aria-labelledby="faq-q-{{ forloop.index }}">{{ item.a }}</div>
+      </div>
+      {%- endfor %}
+    </div>
+    {%- endif %}
+
+    <div class="related-box">
+      <p class="related-label">MORE {{ page.model_name | upcase }} PARTS</p>
+      <div class="related-links">
+        <a href="{{ page.model_url | relative_url }}">All {{ page.model_name }} Parts →</a>
+        <a href="{{ page.brand_url | relative_url }}">All {{ page.brand_name }} Parts →</a>
+        <a href="{{ '/categories/' | append: page.category_slug | append: '/' | relative_url }}">All {{ page.part_type }} →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="scroll-cta" id="scrollCta">
+  <a href="{% include wa.html text=wa_price %}" class="scroll-cta-btn" target="_blank" rel="noopener">💬 {{ page.model_name }} {{ page.part_name }} — দাম জানুন</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": {{ page.brand_name | append: ' ' | append: page.model_name | append: ' ' | append: page.part_name | append: ' Original' | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "image": [{{ main_src | absolute_url | jsonify }}],
+  "brand": { "@type": "Brand", "name": {{ page.brand_name | jsonify }} },
+  "sku": {{ page.sku | default: page.url | jsonify }},
+  {%- if page.part_number %}
+  "mpn": {{ page.part_number | jsonify }},
+  {%- endif %}
+  "category": {{ page.part_type | jsonify }}
+  {%- if page.price %},
+  "offers": {
+    "@type": "Offer",
+    "url": {{ page.url | absolute_url | jsonify }},
+    "priceCurrency": "BDT",
+    "price": "{{ page.price }}",
+    "itemCondition": "https://schema.org/NewCondition",
+    "seller": { "@type": "Organization", "name": "Marjiya Auto Jashore" }
+  }
+  {%- endif %}
+}
+</script>
+
+{% include faq-schema-only.html %}

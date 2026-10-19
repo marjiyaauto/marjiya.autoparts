@@ -1,0 +1,83 @@
+---
+layout: default
+---
+{%- capture wa_loc -%}{{ page.city_name }}-তে পার্টস পাঠাতে চাই — আমার বাইক:{%- endcapture -%}
+{% include breadcrumb.html n2="Delivery Areas" u2="/locations/" n3=page.city_name %}
+
+<section class="loc-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Delivery Available</div>
+    <h1 class="loc-h1">{{ page.city_name | upcase }}<br/><span>DELIVERY</span></h1>
+    <p class="loc-h1-bn bangla" lang="bn">{{ page.city_name_bn }} ডেলিভারি</p>
+    <p class="loc-sub">{{ page.intro }}</p>
+    <div class="hero-actions">
+      <a href="{% include wa.html text=wa_loc %}" class="btn-wa" target="_blank" rel="noopener">💬 Order to {{ page.city_name }}</a>
+      <a href="tel:{{ site.phone_href }}" class="btn-s">📞 {{ site.phone }}</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item"><span class="ti-icon" aria-hidden="true">🚚</span><span><strong>{{ page.delivery_time }}</strong> <span class="ti-text">to {{ page.city_name }}</span></span></div>
+    <div class="trust-item"><span class="ti-icon" aria-hidden="true">✅</span><span><strong>Genuine Parts</strong> <span class="ti-text">Only</span></span></div>
+    <div class="trust-item"><span class="ti-icon" aria-hidden="true">💳</span><span><strong>{{ site.payments }}</strong></span></div>
+    <div class="trust-item"><span class="ti-icon" aria-hidden="true">⭐</span><span><strong>★{{ site.rating }}</strong> <span class="ti-text">Google Rating</span></span></div>
+  </div>
+</div>
+
+<section class="bg-dark">
+  <div class="section-inner">
+    <span class="section-label reveal">Delivery Info</span>
+    <h2 class="section-title reveal">MOTORCYCLE PARTS DELIVERY<br/>TO {{ page.city_name | upcase }}</h2>
+    <p class="section-sub reveal">{{ page.delivery_desc }}</p>
+    <div class="grid-4 mt-40">
+      <div class="card why-card reveal">
+        <div class="why-icon" aria-hidden="true">⏱️</div>
+        <div class="why-title">DELIVERY TIME</div>
+        <div class="why-desc">{{ page.delivery_time }} to {{ page.city_name }}. Order before 12 PM for same-day dispatch.</div>
+      </div>
+      <div class="card why-card reveal">
+        <div class="why-icon" aria-hidden="true">🚚</div>
+        <div class="why-title">COURIER PARTNERS</div>
+        <div class="why-desc">{{ site.couriers }} — whichever is fastest to {{ page.city_name }}.</div>
+      </div>
+      <div class="card why-card reveal">
+        <div class="why-icon" aria-hidden="true">📦</div>
+        <div class="why-title">PACKAGING</div>
+        <div class="why-desc">Bubble wrap + hard carton. Tracking number sent after dispatch.</div>
+      </div>
+      <div class="card why-card reveal">
+        <div class="why-icon" aria-hidden="true">💳</div>
+        <div class="why-title">PAYMENT</div>
+        <div class="why-desc">bKash · Nagad (Send Money) or Cash on Delivery for {{ page.city_name }}.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-black">
+  <div class="section-inner">
+    <span class="section-label reveal">Popular Parts</span>
+    <h2 class="section-title reveal">SHOP BY BRAND</h2>
+    <div class="grid-4">
+      {%- for brand in site.data.brands %}
+      <a href="{{ brand.url | relative_url }}" class="card brand-card reveal">
+        <div class="brand-card-name">{{ brand.name | upcase }}</div>
+        <div class="brand-card-count">Genuine Parts</div>
+        <div class="brand-card-link">Shop Now →</div>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{{ content }}
+
+{%- capture faq_title -%}{{ page.city_name | upcase }} DELIVERY — FAQ{%- endcapture -%}
+{% include faq.html title=faq_title %}
+
+{%- capture cta_head -%}ORDER NOW — DELIVERED TO {{ page.city_name | upcase }}{%- endcapture %}
+{% include cta.html heading=cta_head text="WhatsApp your bike model and the part you need. We confirm stock and dispatch quickly." wa=wa_loc %}

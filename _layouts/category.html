@@ -1,0 +1,63 @@
+---
+layout: default
+---
+{%- capture wa_cat -%}{{ page.cat_name }} দরকার — আমার বাইক:{%- endcapture -%}
+{% include breadcrumb.html n2="All Parts" u2="/categories/" n3=page.cat_name %}
+
+<section class="loc-hero loc-hero-short">
+  <div class="hero-bg"></div><div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Genuine Parts</div>
+    <h1 class="loc-h1">{{ page.cat_name | upcase }}</h1>
+    <p class="loc-h1-bn bangla" lang="bn">{{ page.cat_name_bn }}</p>
+    <p class="loc-sub">{{ page.intro }}</p>
+    <div class="hero-actions">
+      <a href="{% include wa.html text=wa_cat %}" class="btn-wa" target="_blank" rel="noopener">💬 WhatsApp: Order Parts</a>
+      <a href="tel:{{ site.phone_href }}" class="btn-s">📞 {{ site.phone }}</a>
+    </div>
+  </div>
+</section>
+
+{% include trust-bar.html label="OEM Parts Only" %}
+
+<section class="bg-dark">
+  <div class="section-inner">
+    <span class="section-label reveal">Shop by Brand</span>
+    <h2 class="section-title reveal">{{ page.cat_name | upcase }}<br/>BY BRAND</h2>
+    <p class="section-sub reveal">{{ page.body_intro }}</p>
+    <div class="grid-4">
+      {%- for brand in site.data.brands %}
+      {%- capture wa_cb -%}{{ brand.name }} {{ page.cat_name }} চাই — আমার বাইক:{%- endcapture %}
+      <a href="{% include wa.html text=wa_cb %}" class="card brand-card reveal" target="_blank" rel="noopener">
+        <div class="brand-card-name">{{ brand.name | upcase }}</div>
+        <div class="brand-card-count">{{ page.cat_name }}</div>
+        <div class="brand-card-link">💬 WhatsApp →</div>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="bg-black">
+  <div class="section-inner">
+    <span class="section-label reveal">Shop by Model</span>
+    <h2 class="section-title reveal">POPULAR MODELS</h2>
+    <div class="grid-4">
+      {%- for m in site.data.models limit: 8 %}
+      <a href="{{ m.url | relative_url }}" class="card model-card reveal">
+        <div class="model-card-brand">{{ m.brand }}</div>
+        <div class="model-card-name">{{ m.name }}</div>
+        <div class="model-card-desc">Genuine {{ page.cat_name }}</div>
+        <span class="brand-card-link">View Parts →</span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{{ content }}
+
+{%- capture faq_title -%}{{ page.cat_name | upcase }} — FAQ{%- endcapture -%}
+{% include faq.html title=faq_title %}
+
+{% include cta.html heading="ORDER GENUINE PARTS — HOME DELIVERY ALL BANGLADESH" wa=wa_cat %}
