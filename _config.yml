@@ -1,22 +1,21 @@
-
-# ===========================================================
-# MARJIYA AUTO JASHORE - JEKYLL CONFIGURATION (v2)
-# ===========================================================
-# NOTE: This is a GitHub project site. The repository is named
-# "marjiya.autoparts", so URLs live under /marjiya.autoparts.
-# For a custom domain, set url to the domain and baseurl to "".
+# ═══════════════════════════════════════════════════════════
+# MARJIYA AUTO JASHORE — JEKYLL CONFIGURATION (v2)
+# ═══════════════════════════════════════════════════════════
+# NOTE: this is a GitHub *project* site. The repo is named
+# "marjiya.autoparts", so every URL lives under /marjiya.autoparts.
+# If you ever move to a custom domain, set url to the domain and
+# baseurl to "" — nothing else needs to change.
 
 # SITE IDENTITY
 title: "Marjiya Auto Jashore | মারজিয়া অটো"
-encoding: UTF-8
-tagline: "Genuine Motorcycle Spare Parts - সারা বাংলাদেশে ডেলিভারি"
-description: "Genuine motorcycle spare parts for Honda, Yamaha, Bajaj, Hero, TVS and Suzuki. 4.9 rated on Google. Home delivery to all 64 districts. WhatsApp: 01349-022347."
+tagline: "Genuine Motorcycle Spare Parts — সারা বাংলাদেশে ডেলিভারি"
+description: "Genuine motorcycle spare parts for Honda, Yamaha, Bajaj, Hero, TVS and Suzuki. ★4.9 rated on Google. Home delivery all 64 districts. WhatsApp: 01349-022347."
 url: "https://marjiyaauto.github.io"
 baseurl: "/marjiya.autoparts"
 lang: "en"
 timezone: Asia/Dhaka
 
-# CONTACT
+# CONTACT — used by every template, edit here only
 phone: "01349-022347"
 phone_href: "+8801349022347"
 phone2: "01761-839714"
@@ -27,18 +26,18 @@ email: "marjiyaauto@gmail.com"
 address: "A Ali Complex, RN Road, Jashore 7400, Bangladesh"
 address_short: "A Ali Complex, RN Road, Jashore 7400"
 plus_code: "5679+3PP"
-hours: "Sat-Thu - 9 AM - 9 PM"
+hours: "Sat–Thu · 9 AM – 9 PM"
 geo_lat: 23.1664
 geo_lng: 89.2139
 
-# BUSINESS FACTS
+# BUSINESS FACTS — keep these true and update them when they change
 established: "2009"
 rating: "4.9"
 review_count: "127"
 districts: "64"
-delivery_note: "Dhaka 1-2 days; Chattogram/Sylhet 2-3 days; All BD 1-4 working days"
-couriers: "Sundarban; Pathao; Redx; SA Paribahan"
-payments: "bKash; Nagad; COD"
+delivery_note: "Dhaka 1–2 days · Chattogram/Sylhet 2–3 days · All BD 1–4 working days"
+couriers: "Sundarban · Pathao · Redx · SA Paribahan"
+payments: "bKash · Nagad · COD"
 
 # SOCIAL
 facebook: "https://www.facebook.com/marjiya.auto"
@@ -49,15 +48,15 @@ gbp: "https://g.page/marjiya-auto-jashore"
 gbp_review: "https://g.page/marjiya-auto-jashore/review"
 maps_url: "https://maps.google.com/?q=5679%2B3PP+Jashore"
 
-# IMAGES
+# IMAGES (paths are relative to the site root; templates add baseurl)
 logo: "/assets/images/marjiya-auto-logo.svg"
 og_image: "/assets/images/marjiya-auto-og.png"
 placeholder_image: "/assets/images/placeholder-part.svg"
 
-# ANALYTICS
+# ANALYTICS — leave blank until you have real IDs. Nothing loads while blank.
 google_analytics: ""
 
-# PLUGINS
+# PLUGINS (all on the GitHub Pages whitelist)
 plugins:
   - jekyll-sitemap
 
