@@ -1,0 +1,182 @@
+---
+layout: default
+---
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <span class="sep">›</span>
+    <a href="{{ '/brands/' | relative_url }}">Brands</a>
+    <span class="sep">›</span>
+    <span class="current">{{ page.brand_name }} Parts</span>
+  </div>
+</nav>
+
+<!-- BRAND HERO -->
+<section class="hero" style="min-height:60vh">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <h1 class="visually-hidden">{{ page.h1 }}</h1>
+    <div class="hero-tag">● Genuine {{ page.brand_name }} Parts</div>
+    <p class="hero-h1" aria-hidden="true">{{ page.brand_name | upcase }}<br/><span>PARTS</span></p>
+    <p class="hero-h1-bn bangla">{{ page.brand_name_bn }} পার্টস বাংলাদেশ</p>
+    <p class="hero-desc">{{ page.intro }}</p>
+    <p class="hero-desc bangla" style="font-size:15px;margin-top:-16px;margin-bottom:28px">{{ page.intro_bn }}</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/8801349022347?text={{ page.brand_name }}%20পার্টস%20চাই"
+         class="btn-wa" target="_blank" rel="noopener">
+        💬 WhatsApp: Order {{ page.brand_name }} Parts
+      </a>
+      <a href="tel:+8801349022347" class="btn-s">📞 01349-022347</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item"><span class="ti-icon">✅</span><span><strong>Genuine</strong> <span class="ti-text">Original {{ page.brand_name }} Parts</span></span></div>
+    <div class="trust-item"><span class="ti-icon">⭐</span><span><strong>★4.9</strong> <span class="ti-text">127+ Reviews</span></span></div>
+    <div class="trust-item"><span class="ti-icon">🚚</span><span><strong>All 64 Districts</strong> <span class="ti-text">Home Delivery</span></span></div>
+    <div class="trust-item"><span class="ti-icon">🏆</span><span><strong>Since 2009</strong> <span class="ti-text">Authorised Source</span></span></div>
+    <div class="trust-item"><span class="ti-icon">💳</span><span><strong>bKash</strong> <span class="ti-text">· Nagad · COD</span></span></div>
+  </div>
+</div>
+
+<!-- MODEL QUICK LINKS -->
+<section style="background:var(--dark)">
+  <div class="section-inner">
+    <span class="section-label reveal">By Model</span>
+    <h2 class="section-title reveal">{{ page.brand_name }} MODELS</h2>
+    <p class="section-sub reveal">Select your {{ page.brand_name }} model to see all available genuine spare parts.</p>
+    <div class="grid-4 reveal">
+      {% for model in page.top_models %}
+      <a href="{{ model.url | relative_url }}" class="card model-card">
+        <div class="model-card-brand">{{ page.brand_name }}</div>
+        <div class="model-card-name">{{ model.name }}</div>
+        <div class="model-card-desc">Genuine spare parts for {{ model.name }}</div>
+        <div class="model-card-parts">
+          <span class="model-card-part-pill">Engine Parts</span>
+          <span class="model-card-part-pill">Body Parts</span>
+          <span class="model-card-part-pill">Electrical</span>
+        </div>
+        <span class="brand-card-link">View Parts →</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- PARTS BY CATEGORY -->
+<section style="background:var(--black)">
+  <div class="section-inner">
+    <span class="section-label reveal">All Parts</span>
+    <h2 class="section-title reveal">{{ page.brand_name }} SPARE PARTS<br/>BY CATEGORY</h2>
+    <div class="grid-4">
+      <a href="{{ '/categories/engine-parts/' | relative_url }}" class="card cat-card reveal">
+        <div class="cat-card-icon">⚙️</div>
+        <div><div class="cat-card-name">Engine Parts</div><div class="cat-card-name-bn bangla">ইঞ্জিন পার্টস</div></div>
+      </a>
+      <a href="{{ '/categories/fuel-tanks/' | relative_url }}" class="card cat-card reveal">
+        <div class="cat-card-icon">🛢️</div>
+        <div><div class="cat-card-name">Fuel Tanks</div><div class="cat-card-name-bn bangla">ফুয়েল ট্যাংক</div></div>
+      </a>
+      <a href="{{ '/categories/body-parts/' | relative_url }}" class="card cat-card reveal">
+        <div class="cat-card-icon">🏍️</div>
+        <div><div class="cat-card-name">Body Parts</div><div class="cat-card-name-bn bangla">বডি পার্টস</div></div>
+      </a>
+      <a href="{{ '/categories/headlights/' | relative_url }}" class="card cat-card reveal">
+        <div class="cat-card-icon">💡</div>
+        <div><div class="cat-card-name">Headlights</div><div class="cat-card-name-bn bangla">হেডলাইট</div></div>
+      </a>
+      <a href="{{ '/categories/brake-system/' | relative_url }}" class="card cat-card reveal">
+        <div class="cat-card-icon">🔴</div>
+        <div><div class="cat-card-name">Brake System</div><div class="cat-card-name-bn bangla">ব্রেক সিস্টেম</div></div>
+      </a>
+      <a href="{{ '/categories/chain-sprocket/' | relative_url }}" class="card cat-card reveal">
+        <div class="cat-card-icon">⛓️</div>
+        <div><div class="cat-card-name">Chain &amp; Sprocket</div><div class="cat-card-name-bn bangla">চেইন স্প্রকেট</div></div>
+      </a>
+      <a href="{{ '/categories/electrical/' | relative_url }}" class="card cat-card reveal">
+        <div class="cat-card-icon">⚡</div>
+        <div><div class="cat-card-name">Electrical</div><div class="cat-card-name-bn bangla">ইলেকট্রিক্যাল</div></div>
+      </a>
+      <a href="{{ '/categories/battery/' | relative_url }}" class="card cat-card reveal">
+        <div class="cat-card-icon">🔋</div>
+        <div><div class="cat-card-name">Battery</div><div class="cat-card-name-bn bangla">ব্যাটারি</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE CONTENT (custom sections from front matter) -->
+{{ content }}
+
+<!-- FAQ -->
+{% if page.faq %}
+<section style="background:var(--dark)">
+  <div class="section-inner">
+    <span class="section-label reveal">FAQ</span>
+    <h2 class="section-title reveal">{{ page.brand_name }} PARTS — FAQ</h2>
+    <div class="faq-list reveal">
+      {% for item in page.faq %}
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          {{ item.q }}<span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">{{ item.a }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- FAQ SCHEMA -->
+{% if page.faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in page.faq %}
+    {
+      "@type": "Question",
+      "name": "{{ item.q }}",
+      "acceptedAnswer": { "@type": "Answer", "text": "{{ item.a }}" }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+<!-- BRAND SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home",   "item": "https://marjiyaauto.github.io/marjiya-auto/" },
+    { "@type": "ListItem", "position": 2, "name": "Brands", "item": "https://marjiyaauto.github.io/marjiya-auto/brands/" },
+    { "@type": "ListItem", "position": 3, "name": "{{ page.brand_name }} Parts", "item": "{{ page.url | absolute_url }}" }
+  ]
+}
+</script>
+
+<!-- CTA SECTION -->
+<section style="background:var(--black);text-align:center">
+  <div class="section-inner">
+    <span class="section-label reveal">Order Now</span>
+    <h2 class="section-title reveal">GET GENUINE {{ page.brand_name | upcase }} PARTS<br/>DELIVERED TO YOUR DOOR</h2>
+    <p class="section-sub reveal" style="margin:0 auto 32px">WhatsApp or call us. Tell us your bike model. We confirm stock and price immediately. Home delivery all 64 districts of Bangladesh.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap" class="reveal">
+      <a href="https://wa.me/8801349022347?text={{ page.brand_name }}%20পার্টস%20দরকার%20—%20আমার%20বাইক%3A%20"
+         class="btn-wa" target="_blank" rel="noopener">💬 WhatsApp Order</a>
+      <a href="tel:+8801349022347" class="btn-s">📞 01349-022347</a>
+      <a href="{{ '/about/' | relative_url }}" class="btn-s">★ Verify Us First</a>
+    </div>
+  </div>
+</section>
