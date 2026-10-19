@@ -1,0 +1,147 @@
+# ═══════════════════════════════════════════════════════════
+# MARJIYA AUTO — CATEGORIES DATA
+# ═══════════════════════════════════════════════════════════
+
+- key: engine-parts
+  name: Engine Parts
+  name_bn: ইঞ্জিন পার্টস
+  url: /categories/engine-parts/
+  icon: "⚙️"
+  description: "Genuine motorcycle engine parts — pistons, gaskets, cams, valves, piston kits. All brands Bangladesh."
+  priority: 1
+
+- key: fuel-tanks
+  name: Fuel Tanks
+  name_bn: ফুয়েল ট্যাংক
+  url: /categories/fuel-tanks/
+  icon: "🛢️"
+  description: "Genuine motorcycle fuel tanks — original OEM. Bajaj Pulsar, Yamaha FZS, Honda CB150R. Bangladesh delivery."
+  priority: 2
+
+- key: body-parts
+  name: Body Parts
+  name_bn: বডি পার্টস
+  url: /categories/body-parts/
+  icon: "🏍️"
+  description: "Genuine motorcycle body panels, fairings, cowlings — all brands. Home delivery Bangladesh."
+  priority: 3
+
+- key: headlights
+  name: Headlights
+  name_bn: হেডলাইট
+  url: /categories/headlights/
+  icon: "💡"
+  description: "Genuine motorcycle headlight assemblies — all brands. Bangladesh delivery."
+  priority: 4
+
+- key: led-lights
+  name: LED Lights
+  name_bn: LED লাইট
+  url: /categories/led-lights/
+  icon: "🔆"
+  description: "Genuine LED headlight assemblies — TVS Apache, Honda Hornet, Yamaha FZS. Bangladesh."
+  priority: 5
+
+- key: brake-system
+  name: Brake System
+  name_bn: ব্রেক সিস্টেম
+  url: /categories/brake-system/
+  icon: "🔴"
+  description: "Genuine motorcycle brake pads, disc brakes, brake lines — all brands. Bangladesh."
+  priority: 6
+
+- key: electrical
+  name: Electrical
+  name_bn: ইলেকট্রিক্যাল
+  url: /categories/electrical/
+  icon: "⚡"
+  description: "Genuine motorcycle electrical parts — CDI, stator, regulator, wiring. Bangladesh."
+  priority: 7
+
+- key: chain-sprocket
+  name: Chain & Sprocket
+  name_bn: চেইন স্প্রকেট
+  url: /categories/chain-sprocket/
+  icon: "⛓️"
+  description: "Genuine motorcycle chain and sprocket sets — all brands. Bangladesh delivery."
+  priority: 8
+
+- key: suspension
+  name: Suspension
+  name_bn: সাসপেনশন
+  url: /categories/suspension/
+  icon: "🔧"
+  description: "Genuine motorcycle suspension parts — fork oil, shock absorbers. Bangladesh."
+  priority: 9
+
+- key: battery
+  name: Battery
+  name_bn: ব্যাটারি
+  url: /categories/battery/
+  icon: "🔋"
+  description: "Genuine motorcycle batteries — all brands. Bangladesh home delivery."
+  priority: 10
+
+- key: filters-oil
+  name: Filters & Oil
+  name_bn: ফিল্টার ও অয়েল
+  url: /categories/filters-oil/
+  icon: "🫙"
+  description: "Genuine motorcycle air filters, oil filters — all brands. Bangladesh."
+  priority: 11
+
+- key: speedometers
+  name: Speedometers
+  name_bn: স্পিডোমিটার
+  url: /categories/speedometers/
+  icon: "📊"
+  description: "Genuine motorcycle speedometers — digital and analog. All brands Bangladesh."
+  priority: 12
+
+- key: disc-locks
+  name: Disc Locks
+  name_bn: ডিস্ক লক
+  url: /categories/disc-locks/
+  icon: "🔒"
+  description: "Motorcycle disc locks and anti-theft security — Bangladesh."
+  priority: 13
+
+- key: carriers
+  name: Carriers
+  name_bn: ক্যারিয়ার
+  url: /categories/carriers/
+  icon: "📦"
+  description: "Motorcycle luggage carriers and racks — Bangladesh delivery."
+  priority: 14
+
+- key: seat-cowls
+  name: Seat Cowls
+  name_bn: সিট কাউল
+  url: /categories/seat-cowls/
+  icon: "🪑"
+  description: "Motorcycle seat cowls and rear covers — all brands Bangladesh."
+  priority: 15
+
+- key: leg-guards
+  name: Leg Guards
+  name_bn: লেগ গার্ড
+  url: /categories/leg-guards/
+  icon: "🛡️"
+  description: "Motorcycle leg guards and engine guards — Bangladesh."
+  priority: 16
+
+- key: tank-covers
+  name: Tank Covers
+  name_bn: ট্যাংক কভার
+  url: /categories/tank-covers/
+  icon: "🎯"
+  description: "Motorcycle tank pads and tank covers — all brands Bangladesh."
+  priority: 17
+
+- key: accessories
+  name: Accessories
+  name_bn: আনুষাঙ্গিক
+  url: /categories/accessories/
+  icon: "✨"
+  description: "Motorcycle accessories — LED upgrades, carriers, security. Bangladesh."
+  priority: 18

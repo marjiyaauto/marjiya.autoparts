@@ -1,0 +1,14 @@
+# ═══════════════════════════════════════════════════════════
+# CUSTOMER REVIEWS — only add REAL reviews, copied from your
+# Google Business Profile or Facebook page (with the customer's
+# permission to quote them). Leave this list empty and the home
+# page shows a "Read our Google reviews" card instead.
+#
+# Format:
+# - name: "Customer name as shown on Google"
+#   city: "Dhaka"
+#   text: "Exact review text"
+#   source: "Google"         # Google or Facebook
+#   url: "https://g.page/marjiya-auto-jashore"   # link to the review
+# ═══════════════════════════════════════════════════════════
+[]
