@@ -1,0 +1,65 @@
+---
+layout: default
+title: "Genuine Motorcycle Parts Shop Bangladesh | All Products — Marjiya Auto ★4.9"
+description: "Browse genuine original motorcycle spare parts — Bajaj, Yamaha, Honda, Hero, TVS, Suzuki. Authorised source. Home delivery all Bangladesh. WhatsApp: 01349-022347."
+---
+{% include breadcrumb.html n2="All Products" %}
+<section class="loc-hero loc-hero-short"><div class="hero-bg"></div><div class="hero-grid"></div>
+<div class="hero-content">
+<div class="hero-tag">● Genuine Original Parts</div>
+<h1 class="loc-h1">ALL <span>PRODUCTS</span></h1>
+<p class="loc-h1-bn bangla" lang="bn">সব genuine পার্টস</p>
+<p class="loc-sub">Browse our catalog of genuine original motorcycle spare parts. All products sourced from authorised distributors. WhatsApp to confirm availability, price and fitment before ordering.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<a href="https://wa.me/8801349022347?text=পার্টস%20লাগবে%20—%20আমার%20বাইক%3A%20" class="btn-wa" target="_blank" rel="noopener">💬 WhatsApp Order</a>
+<a href="tel:+8801349022347" class="btn-s">📞 01349-022347</a>
+</div></div></section>
+<section style="background:var(--dark)"><div class="section-inner">
+<span class="section-label reveal">Browse by Brand</span>
+<h2 class="section-title reveal">SHOP BY BRAND</h2>
+<div class="grid-4" style="margin-top:32px">
+{% for brand in site.data.brands %}
+<a href="{{ brand.url | relative_url }}" class="card brand-card reveal">
+<div class="brand-card-name">{{ brand.name | upcase }}</div>
+<div class="brand-card-count bangla" lang="bn">{{ brand.name_bn }} পার্টস</div>
+<div class="brand-card-link">View Parts →</div>
+</a>
+{% endfor %}
+</div>
+<div style="margin-top:40px">
+<span class="section-label reveal">Sample Products</span>
+<h2 class="section-title reveal" style="font-size:28px">FEATURED PRODUCTS</h2>
+<p style="font-size:14px;color:var(--muted);margin-bottom:24px" class="reveal">
+WhatsApp to check stock and current price for any product.
+</p>
+<div class="grid-4">
+<a href="{{ '/products/bajaj-pulsar-150-fuel-tank-original/' | relative_url }}" class="card product-card reveal">
+<div class="product-card-img" style="background:var(--dark);height:200px;display:flex;align-items:center;justify-content:center;font-size:48px">🛢️</div>
+<div class="product-card-body">
+<div class="product-card-brand">Bajaj · Pulsar 150</div>
+<div class="product-card-name">Original Fuel Tank</div>
+<div class="product-card-badges"><span class="badge badge-genuine">✓ Genuine</span><span class="badge badge-stock">Ask Stock</span></div>
+<span class="product-card-cta">💬 WhatsApp Price</span>
+</div>
+</a>
+{% for model in site.data.models limit:7 %}
+{%- capture wa_m -%}{{ model.brand }} {{ model.name }} পার্টস চাই — আমার বাইক:{%- endcapture %}
+<a href="{% include wa.html text=wa_m %}"
+   class="card product-card reveal" target="_blank" rel="noopener">
+<div class="product-card-img" style="background:var(--dark);height:200px;display:flex;align-items:center;justify-content:center;font-size:48px">⚙️</div>
+<div class="product-card-body">
+<div class="product-card-brand">{{ model.brand }} · {{ model.name }}</div>
+<div class="product-card-name">Genuine Parts Available</div>
+<div class="product-card-badges"><span class="badge badge-genuine">✓ Genuine</span><span class="badge badge-stock">Ask Stock</span></div>
+<span class="product-card-cta">💬 WhatsApp Price</span>
+</div>
+</a>
+{% endfor %}
+</div>
+</div>
+</div></section>
+<section style="background:var(--black);text-align:center"><div class="section-inner">
+<h2 class="section-title reveal">CAN'T FIND YOUR PART?</h2>
+<p class="section-sub reveal" style="margin:0 auto 28px">আপনার বাইকের মডেল ও পার্টের নাম WhatsApp-এ বলুন। আমরা stock check করে সাথে সাথে জানাব।</p>
+<a href="https://wa.me/8801349022347?text=আমার%20বাইক%3A%20____%20পার্টস%20লাগবে%3A%20" class="btn-wa reveal" target="_blank" rel="noopener">💬 WhatsApp: আমার বাইকের নাম বলুন</a>
+</div></section>
