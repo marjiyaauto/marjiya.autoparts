@@ -1,0 +1,26 @@
+---
+layout: default
+title: "Page Not Found | Marjiya Auto Jashore"
+description: "The page you are looking for could not be found. Browse genuine motorcycle parts or WhatsApp us at 01349-022347."
+robots: "noindex, nofollow"
+permalink: /404.html
+sitemap: false
+---
+<section class="bg-dark error-page">
+  <div class="error-inner">
+    <p class="error-code" aria-hidden="true">404</p>
+    <h1 class="error-title">PAGE NOT FOUND</h1>
+    <p class="error-text bangla" lang="bn">এই page টি পাওয়া যায়নি। নিচের links থেকে যা খুঁজছেন তা খুঁজে নিন, অথবা সরাসরি WhatsApp করুন।</p>
+    <div class="cta-row mb-40">
+      <a href="{{ '/' | relative_url }}" class="btn-p">🏠 Go Home</a>
+      <a href="{% include wa.html text='পার্টস লাগবে — আমার বাইক:' %}" class="btn-wa" target="_blank" rel="noopener">💬 WhatsApp Order</a>
+      <a href="tel:{{ site.phone_href }}" class="btn-s">📞 {{ site.phone }}</a>
+    </div>
+    <div class="cta-row">
+      <a href="{{ '/brands/' | relative_url }}" class="btn-s btn-sm">🏷️ Brands</a>
+      <a href="{{ '/models/' | relative_url }}" class="btn-s btn-sm">🏍️ Models</a>
+      <a href="{{ '/categories/' | relative_url }}" class="btn-s btn-sm">⚙️ Parts</a>
+      <a href="{{ '/locations/' | relative_url }}" class="btn-s btn-sm">📍 Delivery</a>
+    </div>
+  </div>
+</section>

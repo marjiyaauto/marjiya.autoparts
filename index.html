@@ -1,0 +1,303 @@
+---
+layout: default
+title: "Genuine Motorcycle Spare Parts Bangladesh | Honda Yamaha Bajaj Hero TVS Suzuki — Marjiya Auto Jashore ★4.9"
+description: "Marjiya Auto Jashore — genuine motorcycle spare parts for Honda, Yamaha, Bajaj, Hero, TVS and Suzuki. ★4.9 on Google. Home delivery all 64 districts. WhatsApp: 01349-022347."
+og_type: website
+faq:
+  - q: "এটা কি সত্যিই genuine / original পার্টস?"
+    a: "হ্যাঁ — আমরা শুধু genuine পার্টস বিক্রি করি। ২০০৯ সাল থেকে একই ঠিকানা ও একই ফোন নম্বরে আছি, Google Maps-এ ★4.9 rating আছে। Order-এর আগে WhatsApp-এ পার্টসের marking ও packaging-এর ছবি চাইতে পারেন।"
+  - q: "ঢাকায় কতদিনে পৌঁছাবে?"
+    a: "সাধারণত ১–২ কার্যদিবসে। দুপুর ১২টার আগে payment confirm হলে সেদিনই dispatch হয়। Tracking number WhatsApp-এ পাঠানো হয়।"
+  - q: "বাংলাদেশের যেকোনো জায়গায় কি পাঠানো হয়?"
+    a: "হ্যাঁ, সারা বাংলাদেশের ৬৪টি জেলায় পাঠানো হয়। Sundarban, Pathao, Redx, SA Paribahan courier ব্যবহার করা হয়।"
+  - q: "bKash করলে টাকা কি নিরাপদ?"
+    a: "আমরা ২০০৯ সাল থেকে ব্যবসা করছি এবং Google Maps-এ আমাদের দোকান verified। তবুও চিন্তা থাকলে Cash on Delivery (COD) নিতে পারেন — পেয়ে দেখে তারপর pay করুন।"
+  - q: "পার্টসের দাম কত?"
+    a: "দাম stock ও market rate অনুযায়ী পরিবর্তন হয়। WhatsApp করুন (01349-022347) — সাথে সাথে current price জানানো হবে।"
+  - q: "পার্টস fit না হলে কী করব?"
+    a: "Order-এর আগে আমরা আপনার বাইকের বছর confirm করি। তারপরও সমস্যা হলে WhatsApp করুন — আমরা সমাধানের চেষ্টা করব।"
+  - q: "Marjiya Auto Jashore কোথায় অবস্থিত?"
+    a: "A Ali Complex, RN Road, Jashore 7400। Google Maps Plus Code: 5679+3PP। দোকান খোলা শনি–বৃহস্পতিবার, সকাল ৯টা–রাত ৯টা।"
+---
+{%- capture wa_order -%}আমি পার্টস কিনতে চাই — আমার বাইক:{%- endcapture -%}
+{%- capture wa_bike -%}আমার বাইকের নাম:{%- endcapture -%}
+{%- capture wa_trade -%}আমি মেকানিক / বাইক শপ — wholesale pricing জানতে চাই{%- endcapture -%}
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-tag">Jashore · Bangladesh · Since {{ site.established }}</div>
+    <h1 class="hero-h1 hero-h1-sm">
+      <span class="hero-h1-brand">MARJIYA AUTO · মারজিয়া অটো</span>
+      GENUINE MOTORCYCLE<br/><span>SPARE PARTS</span>
+    </h1>
+    <p class="hero-h1-bn bangla" lang="bn">Honda · Yamaha · Bajaj · Hero · TVS · Suzuki</p>
+    <p class="hero-desc">
+      Genuine spare parts for the six brands Bangladeshi riders trust, delivered to your door in all {{ site.districts }} districts.
+      We confirm stock, price and fitment on WhatsApp before you pay.
+    </p>
+    <p class="hero-desc hero-desc-bn bangla" lang="bn">সারা বাংলাদেশে কুরিয়ারে ডেলিভারি। {{ site.payments }}।</p>
+
+    <div class="hero-actions">
+      <a href="{% include wa.html text=wa_order %}" class="btn-wa" target="_blank" rel="noopener">💬 WhatsApp Order Now</a>
+      <a href="tel:{{ site.phone_href }}" class="btn-s">📞 {{ site.phone }}</a>
+      <a href="#quick-order" class="btn-s">Quick Order Form ↓</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-num">★{{ site.rating }}</div><div class="hero-stat-label">Google Rating</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">{{ site.review_count }}+</div><div class="hero-stat-label">Google Reviews</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">{{ site.established }}</div><div class="hero-stat-label">Established</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">{{ site.districts }}</div><div class="hero-stat-label">Districts Served</div></div>
+    </div>
+
+    <!-- BIKE SELECTOR -->
+    <div class="bike-selector" id="bike-selector">
+      <span class="bs-label">🏍️ Find Parts for Your Bike — আপনার বাইক Select করুন</span>
+      <div class="bs-brands">
+        {%- for brand in site.data.brands %}
+        <a href="{{ brand.url | relative_url }}" class="bs-brand">{{ brand.name | upcase }}</a>
+        {%- endfor %}
+      </div>
+      <span class="bs-sub-label">Popular Models — জনপ্রিয় মডেল</span>
+      <div class="bs-models">
+        {%- for model in site.data.models limit: 12 %}
+        <a href="{{ model.url | relative_url }}" class="bs-model">{{ model.name }}</a>
+        {%- endfor %}
+      </div>
+      <div class="bs-fallback">
+        <p class="bangla" lang="bn">আপনার বাইক খুঁজে পাচ্ছেন না?</p>
+        <a href="{% include wa.html text=wa_bike %}" class="btn-wa btn-sm" target="_blank" rel="noopener">💬 WhatsApp বাইকের নাম বলুন</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include trust-bar.html %}
+
+<!-- BRANDS -->
+<section id="brands" class="bg-dark">
+  <div class="section-inner">
+    <span class="section-label reveal">Shop by Brand</span>
+    <h2 class="section-title reveal">MOTORCYCLE BRANDS</h2>
+    <p class="section-sub reveal">Genuine spare parts for all major motorcycle brands in Bangladesh.</p>
+    <div class="grid-4 mt-40">
+      {%- for brand in site.data.brands %}
+      <a href="{{ brand.url | relative_url }}" class="card brand-card reveal">
+        <div class="brand-card-name">{{ brand.name | upcase }}</div>
+        <div class="brand-card-count bangla" lang="bn">{{ brand.name_bn }} পার্টস</div>
+        <div class="brand-card-link">Shop {{ brand.name }} Parts →</div>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section id="categories" class="bg-black">
+  <div class="section-inner">
+    <span class="section-label reveal">Shop by Part Type</span>
+    <h2 class="section-title reveal">ALL PART CATEGORIES</h2>
+    <p class="section-sub reveal bangla" lang="bn">সব ধরনের genuine পার্টস — ইঞ্জিন থেকে বডি পার্টস পর্যন্ত।</p>
+    <div class="grid-4 mt-40">
+      {%- for cat in site.data.categories %}
+      <a href="{{ cat.url | relative_url }}" class="card cat-card reveal">
+        <div class="cat-card-icon" aria-hidden="true">{{ cat.icon }}</div>
+        <div>
+          <div class="cat-card-name">{{ cat.name }}</div>
+          <div class="cat-card-name-bn bangla" lang="bn">{{ cat.name_bn }}</div>
+        </div>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- QUICK ORDER -->
+<section id="quick-order-section" class="bg-dark">
+  <div class="section-inner">
+    <div class="split split-top">
+      <div>
+        <span class="section-label reveal">Quick Order</span>
+        <h2 class="section-title reveal">ORDER IN 30 SECONDS<br/><span class="text-orange">অর্ডার ফর্ম</span></h2>
+        <p class="section-sub reveal">Fill in your bike and the part you need. The button opens WhatsApp with your message already written — just press send. We reply with stock, price and photos.</p>
+        <div class="delivery-steps delivery-steps-2 reveal" id="how-to-order">
+          <div class="ds-step"><div class="ds-icon" aria-hidden="true">💬</div><div class="ds-title">WhatsApp করুন</div><div class="ds-desc">বাইকের মডেল ও পার্টের নাম বলুন।</div></div>
+          <div class="ds-step"><div class="ds-icon" aria-hidden="true">✅</div><div class="ds-title">Confirm করুন</div><div class="ds-desc">Stock, দাম ও fitment confirm; ছবি দেখে নিন।</div></div>
+          <div class="ds-step"><div class="ds-icon" aria-hidden="true">💳</div><div class="ds-title">Payment করুন</div><div class="ds-desc">bKash · Nagad (Send Money) অথবা COD।</div></div>
+          <div class="ds-step"><div class="ds-icon" aria-hidden="true">📦</div><div class="ds-title">Delivery নিন</div><div class="ds-desc">ঢাকায় ১–২ দিন, সারা দেশে ১–৪ কার্যদিবস।</div></div>
+        </div>
+      </div>
+
+      <form class="wa-form reveal" id="quick-order" data-wa="{{ site.whatsapp_url }}" action="{{ site.whatsapp_url }}" method="get" target="_blank">
+        <div class="wa-form-title">💬 WHATSAPP ORDER FORM</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="qo-brand">Brand</label>
+            <select class="form-select" id="qo-brand" name="brand">
+              <option value="">Select brand</option>
+              {%- for brand in site.data.brands %}<option value="{{ brand.name }}">{{ brand.name }}</option>{% endfor %}
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="qo-model">Model</label>
+            <select class="form-select" id="qo-model" name="model"><option value="">Select brand first</option></select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="qo-year">Bike year</label>
+            <input class="form-input" id="qo-year" name="year" inputmode="numeric" maxlength="4" placeholder="e.g. 2021" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="qo-district">Your district</label>
+            <input class="form-input" id="qo-district" name="district" placeholder="e.g. Dhaka" autocomplete="address-level2" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="qo-part">Part needed</label>
+          <input class="form-input" id="qo-part" name="part" placeholder="e.g. fuel tank, headlight, chain set" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="qo-payment">Payment</label>
+          <select class="form-select" id="qo-payment" name="payment">
+            <option value="">I'll decide later</option>
+            <option>bKash</option><option>Nagad</option><option>Cash on Delivery</option>
+          </select>
+        </div>
+        <button class="btn-wa" type="submit">💬 Send on WhatsApp</button>
+        <p class="form-hint">Nothing is stored on this website — the form only builds a WhatsApp message.</p>
+      </form>
+    </div>
+  </div>
+  <script type="application/json" id="quick-order-data">[{% for b in site.data.brands %}{"name":{{ b.name | jsonify }},"models":{{ b.models | map: "name" | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]</script>
+</section>
+
+<!-- WHY US -->
+<section id="why-us" class="bg-black">
+  <div class="section-inner">
+    <span class="section-label reveal">Why Marjiya Auto</span>
+    <h2 class="section-title reveal bangla" lang="bn">কেন মারজিয়া অটো?</h2>
+    <p class="section-sub reveal">{{ site.established }} সাল থেকে যশোরে — ★{{ site.rating }} Google rating, real দোকান, real ফোন নম্বর।</p>
+    <div class="why-grid mt-40">
+      <div class="card why-card reveal"><div class="why-icon" aria-hidden="true">✅</div><div class="why-title">GENUINE PARTS ONLY</div><div class="why-desc">Original OEM parts, no copies. Ask for photos of the actual part and its marking before you pay.</div></div>
+      <div class="card why-card reveal"><div class="why-icon" aria-hidden="true">⭐</div><div class="why-title">★{{ site.rating }} ON GOOGLE</div><div class="why-desc">{{ site.review_count }}+ Google reviews from riders. Read them yourself — the link is one tap away.</div></div>
+      <div class="card why-card reveal"><div class="why-icon" aria-hidden="true">🏆</div><div class="why-title">SINCE {{ site.established }}</div><div class="why-desc">Same address and phone number for over 15 years — easy to verify before you order.</div></div>
+      <div class="card why-card reveal"><div class="why-icon" aria-hidden="true">🚚</div><div class="why-title">NATIONWIDE DELIVERY</div><div class="why-desc">All {{ site.districts }} districts by {{ site.couriers }}. Tracking number after dispatch.</div></div>
+      <div class="card why-card reveal"><div class="why-icon" aria-hidden="true">📍</div><div class="why-title">REAL STORE</div><div class="why-desc">{{ site.address_short }}. Listed on Google Maps — visit us any time we're open.</div></div>
+      <div class="card why-card reveal"><div class="why-icon" aria-hidden="true">💬</div><div class="why-title">FAST WHATSAPP REPLIES</div><div class="why-desc">Message us your bike model and part. We answer during business hours: {{ site.hours }}.</div></div>
+      <div class="card why-card reveal"><div class="why-icon" aria-hidden="true">💳</div><div class="why-title">FLEXIBLE PAYMENT</div><div class="why-desc">bKash · Nagad · Cash on Delivery — choose what you're comfortable with.</div></div>
+      <div class="card why-card reveal"><div class="why-icon" aria-hidden="true">🔒</div><div class="why-title">SAFE PACKAGING</div><div class="why-desc">Bubble wrap and a hard carton for every parcel so parts arrive undamaged.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR MECHANICS + CONTACT -->
+<section id="mechanics" class="bg-dark">
+  <div class="section-inner">
+    <div class="split">
+      <div>
+        <span class="section-label reveal">For Mechanics</span>
+        <h2 class="section-title reveal bangla" lang="bn">মেকানিক ও<br/>বাইক শপের জন্য</h2>
+        <p class="section-sub reveal bangla" lang="bn">Mechanic বা bike shop owner? Bulk / regular order-এ wholesale pricing নিয়ে কথা বলুন।</p>
+        <ul class="mechanics-list reveal">
+          <li>Bulk order pricing — ask on WhatsApp</li>
+          <li>All 6 major brands</li>
+          <li>Fast dispatch for workshop needs</li>
+          <li>Genuine parts your customers can trust</li>
+        </ul>
+        <a href="{% include wa.html text=wa_trade %}" class="btn-wa reveal" target="_blank" rel="noopener">💬 Trade Inquiry</a>
+      </div>
+      <div class="reveal">
+        <div class="contact-card">
+          <h3>CONTACT US</h3>
+          <div class="contact-list">
+            <a class="contact-link" href="tel:{{ site.phone_href }}">📞 {{ site.phone }}</a>
+            <a class="contact-link" href="tel:{{ site.phone2_href }}">📞 {{ site.phone2 }}</a>
+            <a class="contact-link wa" href="{{ site.whatsapp_url }}" target="_blank" rel="noopener">💬 WhatsApp Order</a>
+            <a class="contact-link small" href="{{ site.maps_url }}" target="_blank" rel="noopener">📍 {{ site.address_short }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS (real reviews only — see _data/reviews.yml) -->
+<section id="reviews" class="bg-black">
+  <div class="section-inner">
+    <span class="section-label reveal">Social Proof</span>
+    <h2 class="section-title reveal">WHAT RIDERS SAY<br/>★{{ site.rating }} GOOGLE RATING</h2>
+    {%- if site.data.reviews and site.data.reviews.size > 0 %}
+    <div class="grid-3 mt-40">
+      {%- for r in site.data.reviews %}
+      <figure class="card why-card review-card reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote><p>“{{ r.text }}”</p></blockquote>
+        <figcaption><cite>— {{ r.name }}{% if r.city %}, {{ r.city }}{% endif %}</cite>{% if r.source %} · <a href="{{ r.url | default: site.gbp }}" target="_blank" rel="noopener">{{ r.source }}</a>{% endif %}</figcaption>
+      </figure>
+      {%- endfor %}
+    </div>
+    <div class="cta-row reveal mt-40">
+      <a href="{{ site.gbp }}" target="_blank" rel="noopener" class="btn-s">⭐ Read All {{ site.review_count }}+ Google Reviews</a>
+    </div>
+    {%- else %}
+    <div class="card review-cta reveal">
+      <div class="big">★{{ site.rating }}</div>
+      <p>{{ site.review_count }}+ riders have rated Marjiya Auto on Google. Read their reviews in your own time — we don't pick the good ones for you.</p>
+      <div class="cta-row">
+        <a href="{{ site.gbp }}" target="_blank" rel="noopener" class="btn-p">⭐ Read Google Reviews</a>
+        <a href="{{ site.gbp_review }}" target="_blank" rel="noopener" class="btn-s">✍️ Write a Review</a>
+      </div>
+    </div>
+    {%- endif %}
+  </div>
+</section>
+
+<!-- DELIVERY -->
+<section id="delivery" class="bg-dark">
+  <div class="section-inner">
+    <span class="section-label reveal">Nationwide Reach</span>
+    <h2 class="section-title reveal">WE DELIVER TO<br/>ALL {{ site.districts }} DISTRICTS</h2>
+    <p class="section-sub reveal">From Jashore to Tetulia — {{ site.delivery_note }}.</p>
+    <div class="grid-4 mt-40">
+      {%- for loc in site.data.locations %}
+      <a href="{{ loc.url | relative_url }}" class="card why-card reveal">
+        <div class="why-icon" aria-hidden="true">📍</div>
+        <div class="why-title">{{ loc.name | upcase }}</div>
+        <div class="why-desc bangla" lang="bn">{{ loc.name_bn }} — {{ loc.delivery_time }}</div>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{% include faq.html title="FREQUENTLY ASKED QUESTIONS" %}
+
+<!-- MAP -->
+<section id="contact" class="bg-dark">
+  <div class="section-inner">
+    <div class="split split-top">
+      <div>
+        <span class="section-label reveal">Find Us</span>
+        <h2 class="section-title reveal">OUR STORE</h2>
+        <p class="store-line reveal">A ALI COMPLEX, RN ROAD</p>
+        <p class="section-sub reveal">Jashore Sadar, Jashore — 7400, Bangladesh<br/>Plus Code: {{ site.plus_code }}<br/>Open: {{ site.hours }}</p>
+        <div class="cta-row cta-row-left reveal">
+          <a href="{{ site.maps_url }}" target="_blank" rel="noopener" class="btn-p btn-sm">📍 Open in Google Maps</a>
+          <a href="{{ site.gbp_review }}" target="_blank" rel="noopener" class="btn-s btn-sm">⭐ Leave a Review</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps?q={{ site.geo_lat }},{{ site.geo_lng }}&z=16&output=embed"
+            title="Map: Marjiya Auto Jashore, A Ali Complex, RN Road, Jashore"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
