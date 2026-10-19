@@ -1,0 +1,117 @@
+# ═══════════════════════════════════════════════════════════
+# MARJIYA AUTO JASHORE — JEKYLL CONFIGURATION
+# ═══════════════════════════════════════════════════════════
+
+# SITE IDENTITY
+title: "Marjiya Auto Jashore | মারজিয়া অটো"
+tagline: "Genuine Motorcycle Spare Parts — সারা বাংলাদেশে ডেলিভারি"
+description: "Genuine motorcycle spare parts for Honda, Yamaha, Bajaj, Hero, TVS and Suzuki. Authorised source. ★4.9 rated. Home delivery all 64 districts. WhatsApp: 01349-022347."
+url: "https://marjiyaauto.github.io"
+baseurl: "/marjiya-auto"
+lang: "en"
+
+# CONTACT
+phone: "01349-022347"
+phone2: "01761-839714"
+whatsapp: "8801349022347"
+whatsapp_url: "https://wa.me/8801349022347"
+email: "marjiyaauto@gmail.com"
+address: "A Ali Complex, RN Road, Jashore 7400, Bangladesh"
+plus_code: "5679+3PP"
+established: "2009"
+rating: "4.9"
+review_count: "127"
+
+# SOCIAL
+facebook: "https://www.facebook.com/marjiya.auto"
+youtube: "https://www.youtube.com/@marjiya_auto_jashore"
+instagram: "https://www.instagram.com/marjiya.auto"
+tiktok: "https://www.tiktok.com/@marjiya.auto"
+gbp: "https://g.page/marjiya-auto-jashore"
+gbp_review: "https://g.page/marjiya-auto-jashore/review"
+
+# BRAND COLOURS
+color_primary: "#f05a1a"
+color_dark: "#c44710"
+color_black: "#0a0a0a"
+color_card: "#161819"
+color_border: "#2a2c2f"
+color_white: "#f5f2ed"
+color_muted: "#8a8784"
+color_green: "#1d9e75"
+
+# SEO — jekyll-seo-tag config
+twitter:
+  username: marjiyaauto
+  card: summary_large_image
+
+logo: "/marjiya-auto/assets/images/marjiya-auto-logo.webp"
+
+social:
+  name: "Marjiya Auto Jashore"
+  links:
+    - "https://www.facebook.com/marjiya.auto"
+    - "https://www.youtube.com/@marjiya_auto_jashore"
+    - "https://www.instagram.com/marjiya.auto"
+    - "https://www.tiktok.com/@marjiya.auto"
+    - "https://g.page/marjiya-auto-jashore"
+
+# ANALYTICS — replace with your actual IDs
+google_analytics: "G-XXXXXXXXXX"
+facebook_pixel: "XXXXXXXXXXXXXXXXX"
+
+# JEKYLL PLUGINS (all whitelisted for GitHub Pages)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-feed
+
+# SITEMAP CONFIG
+defaults:
+  - scope:
+      path: ""
+    values:
+      sitemap: true
+      image: "/marjiya-auto/assets/images/marjiya-auto-og.webp"
+
+# EXCLUDE FROM BUILD
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - README.md
+
+# INCLUDE IN BUILD
+include:
+  - _pages
+  - robots.txt
+
+# COLLECTIONS
+collections:
+  products:
+    output: true
+    permalink: /products/:name/
+
+# MARKDOWN
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# SASS
+sass:
+  style: compressed
+
+# PAGINATION
+paginate: 24
+paginate_path: "/products/page/:num/"
+
+# TIMEZONE
+timezone: Asia/Dhaka
+
+# FEED
+feed:
+  path: feed.xml
