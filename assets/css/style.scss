@@ -1,8 +1,8 @@
-/* ═══════════════════════════════════════════════════════════
-   MARJIYA AUTO JASHORE — COMPLETE DESIGN SYSTEM (v2)
-   ═══════════════════════════════════════════════════════════ */
+/* ===========================================================
+   MARJIYA AUTO JASHORE - COMPLETE DESIGN SYSTEM (v2)
+   =========================================================== */
 
-/* ── 1. DESIGN TOKENS ──────────────────────────────────── */
+/* -- 1. DESIGN TOKENS ------------------------------------ */
 :root {
   --orange:      #f05a1a;
   --orange-dark: #c44710;
@@ -30,7 +30,7 @@
   --shadow: 0 4px 24px rgba(0,0,0,.4);
 }
 
-/* ── 2. RESET ───────────────────────────────────────────── */
+/* -- 2. RESET --------------------------------------------- */
 *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
@@ -47,7 +47,7 @@ ul, ol { list-style: none; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 input, textarea, select { font-family: inherit; }
 
-/* ── 3. TYPOGRAPHY ──────────────────────────────────────── */
+/* -- 3. TYPOGRAPHY ---------------------------------------- */
 h1,h2,h3,h4,h5,h6 { font-family: var(--ff-d); letter-spacing: 1px; line-height: 1.1; }
 .bangla { font-family: var(--ff-bn); }
 .section-label {
@@ -71,7 +71,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--ff-d); letter-spacing: 1px; line-height: 
   clip: rect(0,0,0,0); white-space: nowrap; border: 0;
 }
 
-/* ── 4. LAYOUT ──────────────────────────────────────────── */
+/* -- 4. LAYOUT -------------------------------------------- */
 .container { max-width: var(--max-w); margin: 0 auto; padding: 0 20px; }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
@@ -82,7 +82,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--ff-d); letter-spacing: 1px; line-height: 
 section { padding: 72px 20px; }
 .section-inner { max-width: var(--max-w); margin: 0 auto; }
 
-/* ── 5. ANNOUNCEMENT BAR ────────────────────────────────── */
+/* -- 5. ANNOUNCEMENT BAR ---------------------------------- */
 .announce-bar {
   background: linear-gradient(90deg, var(--orange-btn-h), var(--orange-btn));
   padding: 10px 20px;
@@ -97,7 +97,7 @@ section { padding: 72px 20px; }
 .announce-bar a { color: #fff; font-weight: 700; }
 .announce-bar .sep { margin: 0 12px; opacity: .6; }
 
-/* ── 6. NAVIGATION ──────────────────────────────────────── */
+/* -- 6. NAVIGATION ---------------------------------------- */
 .site-nav {
   position: sticky; top: 0; z-index: 150;
   background: rgba(10,10,10,.96);
@@ -196,7 +196,7 @@ section { padding: 72px 20px; }
 .mbn-item:hover,.mbn-item:active { color: var(--orange); }
 .mbn-wa { color: #25d366 !important; }
 
-/* ── 7. BREADCRUMB ──────────────────────────────────────── */
+/* -- 7. BREADCRUMB ---------------------------------------- */
 .breadcrumb {
   background: var(--dark); border-bottom: 1px solid var(--border);
   padding: 12px 20px; font-size: 12px;
@@ -210,7 +210,7 @@ section { padding: 72px 20px; }
 .breadcrumb .sep { color: var(--border); }
 .breadcrumb .current { color: var(--white); font-weight: 600; }
 
-/* ── 8. HERO SECTION ────────────────────────────────────── */
+/* -- 8. HERO SECTION -------------------------------------- */
 .hero {
   position: relative; min-height: 88vh;
   display: flex; align-items: center;
@@ -280,7 +280,7 @@ section { padding: 72px 20px; }
   text-transform: uppercase;
 }
 
-/* ── 9. BUTTONS ─────────────────────────────────────────── */
+/* -- 9. BUTTONS ------------------------------------------- */
 .btn-p,.btn-s,.btn-wa,.btn-call {
   display: inline-flex; align-items: center; gap: 8px;
   font-family: var(--ff-d); letter-spacing: 1.5px;
@@ -309,7 +309,7 @@ section { padding: 72px 20px; }
 .btn-call:hover { border-color: var(--orange); color: var(--orange); }
 .btn-sm { padding: 9px 18px !important; font-size: 14px !important; }
 
-/* ── 10. TRUST BAR ──────────────────────────────────────── */
+/* -- 10. TRUST BAR ---------------------------------------- */
 .trust-bar {
   background: var(--dark); border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border); padding: 16px 20px;
@@ -328,7 +328,7 @@ section { padding: 72px 20px; }
 .trust-item .ti-text { color: var(--muted); font-weight: 400; }
 .trust-item strong { color: var(--white); }
 
-/* ── 11. BIKE SELECTOR ──────────────────────────────────── */
+/* -- 11. BIKE SELECTOR ------------------------------------ */
 .bike-selector {
   background: var(--card); border: 1px solid var(--border);
   border-radius: var(--radius); padding: 28px;
@@ -368,7 +368,7 @@ section { padding: 72px 20px; }
 }
 .bs-fallback p { font-size: 13px; color: var(--muted); }
 
-/* ── 12. CARDS ──────────────────────────────────────────── */
+/* -- 12. CARDS -------------------------------------------- */
 .card {
   background: var(--card); border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -463,7 +463,7 @@ section { padding: 72px 20px; }
 }
 .cat-card-name-bn { font-family: var(--ff-bn); font-size: 14px; color: var(--muted); }
 
-/* ── 13. PRODUCT PAGE ───────────────────────────────────── */
+/* -- 13. PRODUCT PAGE ------------------------------------- */
 .product-page { max-width: var(--max-w); margin: 0 auto; padding: 40px 20px; }
 .product-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
 .product-gallery {}
@@ -539,7 +539,7 @@ section { padding: 72px 20px; }
 }
 .product-fitment-warn strong { color: var(--orange); }
 
-/* ── 14. GENUINE VS COPY ────────────────────────────────── */
+/* -- 14. GENUINE VS COPY ---------------------------------- */
 .gvc-table { width: 100%; border-collapse: collapse; margin: 24px 0; border-radius: var(--radius); overflow: hidden; }
 .gvc-table th {
   background: var(--dark); padding: 14px 16px;
@@ -555,7 +555,7 @@ section { padding: 72px 20px; }
 .gvc-table td.col-genuine { color: var(--green); }
 .gvc-table td.col-copy { color: var(--red); }
 
-/* ── 15. FAQ ────────────────────────────────────────────── */
+/* -- 15. FAQ ---------------------------------------------- */
 .faq-list { max-width: 720px; display: flex; flex-direction: column; gap: 12px; }
 .faq-item {
   background: var(--card); border: 1px solid var(--border);
@@ -577,7 +577,7 @@ section { padding: 72px 20px; }
 .faq-item.open .faq-a, .no-js .faq-a { display: block; }
 .faq-item.open .faq-q { color: var(--orange); }
 
-/* ── 16. LOCATION PAGE ──────────────────────────────────── */
+/* -- 16. LOCATION PAGE ------------------------------------ */
 .loc-hero {
   position: relative; min-height: 60vh;
   display: flex; align-items: center;
@@ -591,7 +591,7 @@ section { padding: 72px 20px; }
 .loc-h1-bn { font-family: var(--ff-bn); font-size: clamp(18px, 3vw, 26px); color: var(--muted); margin-bottom: 24px; }
 .loc-sub { font-size: 15px; color: var(--muted); max-width: 540px; line-height: 1.8; margin-bottom: 32px; }
 
-/* ── 17. DELIVERY STEPS ─────────────────────────────────── */
+/* -- 17. DELIVERY STEPS ----------------------------------- */
 .delivery-steps {
   display: grid; grid-template-columns: repeat(4,1fr); gap: 20px;
   counter-reset: step;
@@ -615,7 +615,7 @@ section { padding: 72px 20px; }
 }
 .ds-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
 
-/* ── 18. WHY US GRID ────────────────────────────────────── */
+/* -- 18. WHY US GRID -------------------------------------- */
 .why-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
 .why-card {
   background: var(--card); border: 1px solid var(--border);
@@ -630,7 +630,7 @@ section { padding: 72px 20px; }
 }
 .why-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
 
-/* ── 19. SCROLL REVEAL ANIMATION ───────────────────────── */
+/* -- 19. SCROLL REVEAL ANIMATION ------------------------- */
 /* Content is visible by default; only hidden when JS is running (so no-JS visitors and crawlers see everything) */
 .js .reveal {
   opacity: 0; transform: translateY(24px);
@@ -638,7 +638,7 @@ section { padding: 72px 20px; }
 }
 .js .reveal.visible { opacity: 1; transform: translateY(0); }
 
-/* ── 20. FLOATING ELEMENTS ──────────────────────────────── */
+/* -- 20. FLOATING ELEMENTS -------------------------------- */
 .wa-float {
   position: fixed; bottom: 88px; right: 20px; z-index: 120;
   background: #25d366; color: #fff;
@@ -694,7 +694,7 @@ section { padding: 72px 20px; }
 .back-top.visible { opacity: 1; pointer-events: all; }
 .back-top:hover { border-color: var(--orange); color: var(--orange); }
 
-/* ── 21. FOOTER ─────────────────────────────────────────── */
+/* -- 21. FOOTER ------------------------------------------- */
 .site-footer {
   background: #060708; border-top: 1px solid var(--border);
   padding: 60px 20px 20px;
@@ -741,7 +741,7 @@ section { padding: 72px 20px; }
 .footer-rating:hover { color: var(--white); }
 .footer-rating .stars { color: #ffd700; }
 
-/* ── 22. FORMS ──────────────────────────────────────────── */
+/* -- 22. FORMS -------------------------------------------- */
 .wa-form {
   background: var(--card); border: 1px solid var(--border);
   border-radius: var(--radius); padding: 28px;
@@ -763,7 +763,7 @@ section { padding: 72px 20px; }
 }
 .form-textarea { min-height: 100px; resize: vertical; }
 
-/* ── 23. MAPS EMBED ─────────────────────────────────────── */
+/* -- 23. MAPS EMBED --------------------------------------- */
 .map-embed {
   width: 100%; height: 320px;
   border: 1px solid var(--border); border-radius: var(--radius);
@@ -774,10 +774,10 @@ section { padding: 72px 20px; }
   filter: grayscale(60%) invert(85%) hue-rotate(185deg);
 }
 
-/* ── 24. RELATED PRODUCTS ───────────────────────────────── */
+/* -- 24. RELATED PRODUCTS --------------------------------- */
 .related-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
 
-/* ── 25. RESPONSIVE ─────────────────────────────────────── */
+/* -- 25. RESPONSIVE --------------------------------------- */
 @media (max-width: 1024px) {
   .grid-4, .why-grid, .related-grid { grid-template-columns: repeat(2,1fr); }
   .delivery-steps { grid-template-columns: repeat(2,1fr); }
@@ -810,7 +810,7 @@ section { padding: 72px 20px; }
   .bs-brand { padding: 8px 14px; font-size: 15px; }
 }
 
-/* ── 26. PRINT ──────────────────────────────────────────── */
+/* -- 26. PRINT -------------------------------------------- */
 @media print {
   .site-nav, .announce-bar, .wa-float, .mobile-bottom-nav,
   .scroll-cta, .back-top, .mobile-nav { display: none !important; }
@@ -818,7 +818,7 @@ section { padding: 72px 20px; }
   a { color: #000; }
 }
 
-/* ── 27. UTILITY CLASSES ────────────────────────────────── */
+/* -- 27. UTILITY CLASSES ---------------------------------- */
 .text-orange { color: var(--orange); }
 .text-muted  { color: var(--muted); }
 .text-white  { color: var(--white); }
@@ -835,11 +835,11 @@ section { padding: 72px 20px; }
 .hidden { display: none !important; }
 
 
-/* ═══════════════════════════════════════════════════════════
+/* ===========================================================
    v2 UPGRADES
-   ═══════════════════════════════════════════════════════════ */
+   =========================================================== */
 
-/* ── 28. ACCESSIBILITY ─────────────────────────────────── */
+/* -- 28. ACCESSIBILITY ----------------------------------- */
 .skip-link {
   position: absolute; left: 12px; top: -60px; z-index: 500;
   background: var(--orange-btn); color: #fff; padding: 10px 16px;
@@ -855,7 +855,7 @@ main:focus { outline: none; }
   .js .reveal { opacity: 1; transform: none; }
 }
 
-/* ── 29. LAYOUT HELPERS (replace repeated inline styles) ─ */
+/* -- 29. LAYOUT HELPERS (replace repeated inline styles) - */
 .bg-dark  { background: var(--dark); }
 .bg-black { background: var(--black); }
 .text-center { text-align: center; }
@@ -876,10 +876,10 @@ main:focus { outline: none; }
 .table-wrap .gvc-table { margin: 0; min-width: 480px; }
 .hero-h1, .loc-h1 { overflow-wrap: anywhere; }
 
-/* ── 30. BREADCRUMB (list markup) ──────────────────────── */
+/* -- 30. BREADCRUMB (list markup) ------------------------ */
 .breadcrumb-inner li { display: inline-flex; align-items: center; gap: 8px; }
 
-/* ── 31. ANNOUNCEMENT BAR CLOSE ────────────────────────── */
+/* -- 31. ANNOUNCEMENT BAR CLOSE -------------------------- */
 .announce-bar { padding-right: 44px; }
 .announce-close {
   position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
@@ -888,7 +888,7 @@ main:focus { outline: none; }
 }
 .announce-close:hover { opacity: 1; background: rgba(0,0,0,.2); }
 
-/* ── 32. NAV BREAKPOINT (hamburger below 900px) ────────── */
+/* -- 32. NAV BREAKPOINT (hamburger below 900px) ---------- */
 @media (max-width: 900px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
@@ -901,7 +901,7 @@ main:focus { outline: none; }
 }
 .mobile-nav a.active, .nav-links a.active { color: var(--orange); }
 
-/* ── 33. FOOTER ────────────────────────────────────────── */
+/* -- 33. FOOTER ------------------------------------------ */
 .footer-contact { font-style: normal; }
 .footer-hours { color: var(--muted); font-size: 13px; }
 .footer-socials { flex-wrap: wrap; }
@@ -911,7 +911,7 @@ main:focus { outline: none; }
 }
 .footer-social:hover { color: var(--orange); }
 
-/* ── 34. PRODUCT PAGE ADDITIONS ────────────────────────── */
+/* -- 34. PRODUCT PAGE ADDITIONS -------------------------- */
 .product-thumb { padding: 0; display: block; }
 .info-box { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; font-size: 13px; color: var(--muted); }
 .info-box strong { color: var(--white); }
@@ -930,7 +930,7 @@ main:focus { outline: none; }
 .related-links a { background: var(--dark); border: 1px solid var(--border); border-radius: 3px; padding: 8px 14px; font-size: 13px; color: var(--muted); transition: color var(--transition), border-color var(--transition); }
 .related-links a:hover { color: var(--orange); border-color: var(--orange); }
 
-/* ── 35. NOTICE BOX ────────────────────────────────────── */
+/* -- 35. NOTICE BOX -------------------------------------- */
 .notice {
   background: rgba(240,90,26,.08); border: 1px solid rgba(240,90,26,.3);
   border-left: 4px solid var(--orange); border-radius: 0 var(--radius) var(--radius) 0;
@@ -941,12 +941,12 @@ main:focus { outline: none; }
 .notice p strong { color: var(--white); }
 .notice .btn-wa { margin-top: 16px; display: inline-flex; }
 
-/* ── 36. HOME PAGE ─────────────────────────────────────── */
+/* -- 36. HOME PAGE --------------------------------------- */
 .hero-h1-sm { font-size: clamp(44px, 8vw, 96px); }
 .hero-h1 .hero-h1-brand { display: block; font-size: .42em; letter-spacing: 6px; color: var(--muted); margin-bottom: 10px; }
 .mechanics-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
 .mechanics-list li { display: flex; gap: 10px; font-size: 14px; color: var(--muted); }
-.mechanics-list li::before { content: "✓"; color: var(--green); font-weight: 700; }
+.mechanics-list li::before { content: "\2713 "; color: var(--green); font-weight: 700; }
 .contact-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
 .contact-card h3 { font-size: 22px; letter-spacing: 1px; color: var(--white); margin-bottom: 20px; }
 .contact-list { display: flex; flex-direction: column; gap: 14px; }
@@ -975,7 +975,7 @@ main:focus { outline: none; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .form-hint { font-size: 12px; color: var(--muted); margin-top: 12px; }
 
-/* ── 37. SMALL-SCREEN FIXES FOR LEGACY INLINE GRIDS ────── */
+/* -- 37. SMALL-SCREEN FIXES FOR LEGACY INLINE GRIDS ------ */
 @media (max-width: 768px) {
   .split, .form-row { grid-template-columns: 1fr; gap: 28px; }
   [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; gap: 28px !important; }
