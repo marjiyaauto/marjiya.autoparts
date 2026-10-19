@@ -1,0 +1,44 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoPartsStore",
+  "@id": {{ '/#business' | absolute_url | jsonify }},
+  "name": "Marjiya Auto Jashore",
+  "alternateName": "মারজিয়া অটো যশোর",
+  "url": {{ '/' | absolute_url | jsonify }},
+  "logo": {{ site.logo | absolute_url | jsonify }},
+  "image": {{ site.og_image | absolute_url | jsonify }},
+  "description": {{ site.description | jsonify }},
+  "telephone": "{{ site.phone_href }}",
+  "email": {{ site.email | jsonify }},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "A Ali Complex, RN Road",
+    "addressLocality": "Jashore",
+    "addressRegion": "Khulna Division",
+    "postalCode": "7400",
+    "addressCountry": "BD"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": {{ site.geo_lat }}, "longitude": {{ site.geo_lng }} },
+  "hasMap": {{ site.gbp | jsonify }},
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday"],
+    "opens": "09:00",
+    "closes": "21:00"
+  }],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ site.rating }}",
+    "reviewCount": "{{ site.review_count }}",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "foundingDate": "{{ site.established }}",
+  "priceRange": "৳৳",
+  "currenciesAccepted": "BDT",
+  "paymentAccepted": "Cash, bKash, Nagad",
+  "areaServed": { "@type": "Country", "name": "Bangladesh" },
+  "sameAs": [{{ site.facebook | jsonify }}, {{ site.youtube | jsonify }}, {{ site.instagram | jsonify }}, {{ site.tiktok | jsonify }}, {{ site.gbp | jsonify }}]
+}
+</script>

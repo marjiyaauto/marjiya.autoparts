@@ -1,0 +1,10 @@
+{%- comment -%} Usage: {% include trust-bar.html label="Original Bajaj Parts" %} {%- endcomment -%}
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item"><span class="ti-icon" aria-hidden="true">✅</span><span><strong>Genuine</strong> <span class="ti-text">{{ include.label | default: "Original OEM Parts Only" }}</span></span></div>
+    <div class="trust-item"><span class="ti-icon" aria-hidden="true">⭐</span><span><strong>★{{ site.rating }}</strong> <span class="ti-text">{{ site.review_count }}+ Google Reviews</span></span></div>
+    <div class="trust-item"><span class="ti-icon" aria-hidden="true">🚚</span><span><strong>All {{ site.districts }} Districts</strong> <span class="ti-text">Home Delivery</span></span></div>
+    <div class="trust-item"><span class="ti-icon" aria-hidden="true">🏆</span><span><strong>Since {{ site.established }}</strong> <span class="ti-text">Jashore Store</span></span></div>
+    <div class="trust-item"><span class="ti-icon" aria-hidden="true">💳</span><span><strong>{{ site.payments }}</strong></span></div>
+  </div>
+</div>

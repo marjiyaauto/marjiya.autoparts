@@ -1,0 +1,13 @@
+{%- comment -%} Usage: {% include cta.html heading="ORDER NOW" text="..." wa="message text" %} {%- endcomment -%}
+<section class="bg-black text-center">
+  <div class="section-inner">
+    <h2 class="section-title reveal">{{ include.heading }}</h2>
+    {%- if include.text %}
+    <p class="section-sub section-sub-center reveal">{{ include.text }}</p>
+    {%- endif %}
+    <div class="cta-row reveal">
+      <a href="{% include wa.html text=include.wa %}" class="btn-wa" target="_blank" rel="noopener">💬 WhatsApp Order</a>
+      <a href="tel:{{ site.phone_href }}" class="btn-s">📞 {{ site.phone }}</a>
+    </div>
+  </div>
+</section>

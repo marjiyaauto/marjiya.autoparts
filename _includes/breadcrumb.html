@@ -1,0 +1,33 @@
+{%- comment -%}
+  Visible breadcrumb + BreadcrumbList JSON-LD.
+  Usage: {% include breadcrumb.html n2="Brands" u2="/brands/" n3="Bajaj Parts" %}
+  The LAST name given is the current page (its url is optional).
+  Up to 4 levels after Home.
+{%- endcomment -%}
+{%- assign last = 2 -%}
+{%- if include.n3 -%}{%- assign last = 3 -%}{%- endif -%}
+{%- if include.n4 -%}{%- assign last = 4 -%}{%- endif -%}
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol class="breadcrumb-inner">
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    <li><span class="sep" aria-hidden="true">›</span>{% if last == 2 %}<span class="current" aria-current="page">{{ include.n2 }}</span>{% else %}<a href="{{ include.u2 | relative_url }}">{{ include.n2 }}</a>{% endif %}</li>
+    {%- if include.n3 %}
+    <li><span class="sep" aria-hidden="true">›</span>{% if last == 3 %}<span class="current" aria-current="page">{{ include.n3 }}</span>{% else %}<a href="{{ include.u3 | relative_url }}">{{ include.n3 }}</a>{% endif %}</li>
+    {%- endif %}
+    {%- if include.n4 %}
+    <li><span class="sep" aria-hidden="true">›</span><span class="current" aria-current="page">{{ include.n4 }}</span></li>
+    {%- endif %}
+  </ol>
+</nav>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":{{ '/' | absolute_url | jsonify }}},
+  {"@type":"ListItem","position":2,"name":{{ include.n2 | jsonify }},"item":{% if last == 2 %}{{ page.url | absolute_url | jsonify }}{% else %}{{ include.u2 | absolute_url | jsonify }}{% endif %}}
+  {%- if include.n3 -%},
+  {"@type":"ListItem","position":3,"name":{{ include.n3 | jsonify }},"item":{% if last == 3 %}{{ page.url | absolute_url | jsonify }}{% else %}{{ include.u3 | absolute_url | jsonify }}{% endif %}}
+  {%- endif -%}
+  {%- if include.n4 -%},
+  {"@type":"ListItem","position":4,"name":{{ include.n4 | jsonify }},"item":{{ page.url | absolute_url | jsonify }}}
+  {%- endif %}
+]}
+</script>

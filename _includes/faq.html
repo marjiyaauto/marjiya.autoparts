@@ -1,0 +1,24 @@
+{%- comment -%} FAQ section + FAQPage JSON-LD from page.faq. Usage: {% include faq.html title="BAJAJ PARTS — FAQ" %} {%- endcomment -%}
+{%- if page.faq and page.faq.size > 0 -%}
+<section class="bg-dark" aria-labelledby="faq-title">
+  <div class="section-inner">
+    <span class="section-label reveal">FAQ</span>
+    <h2 class="section-title reveal" id="faq-title">{{ include.title | default: "FREQUENTLY ASKED QUESTIONS" }}</h2>
+    <div class="faq-list reveal">
+      {%- for item in page.faq %}
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-{{ forloop.index }}" id="faq-q-{{ forloop.index }}">{{ item.q }}<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a" id="faq-a-{{ forloop.index }}" role="region" aria-labelledby="faq-q-{{ forloop.index }}">{{ item.a }}</div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{%- for item in page.faq -%}
+  {"@type":"Question","name":{{ item.q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ item.a | jsonify }}}}{% unless forloop.last %},{% endunless %}
+{%- endfor -%}
+]}
+</script>
+{%- endif -%}
